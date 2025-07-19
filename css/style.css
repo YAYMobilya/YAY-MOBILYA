@@ -8,9 +8,9 @@ body {
     min-height:100vh;
 }
 .sidebar {
-    width:250px;
+    width:220px;
     background:#111;
-    padding:20px;
+    padding:15px;
     position:fixed;
     top:0; bottom:0; left:0;
     overflow-y:auto;
@@ -21,48 +21,43 @@ body {
 }
 .sidebar h2 {
     color:#f1c40f;
-    font-size:18px;
+    font-size:16px;
     margin-top:0;
 }
 .sidebar ul { list-style:none; padding:0; margin:0; }
-.sidebar > ul > li {
-    margin:8px 0;
-}
+.sidebar > ul > li { margin:6px 0; }
 .sidebar > ul > li > a {
     color:#ccc;
     text-decoration:none;
     display:block;
-    padding:6px 10px;
-    position:relative;
+    padding:5px 8px;
 }
 .sidebar > ul > li > a:hover {
     color:#f1c40f;
 }
 .submenu {
     display:none;
-    padding-left:15px;
+    padding-left:12px;
 }
 .submenu a {
     color:#f1c40f;
     text-decoration:none;
     display:block;
-    padding:5px 0;
+    padding:4px 0;
 }
 li.open .submenu {
     display:block;
 }
 .content {
-    margin-left:270px;
-    padding:20px;
+    margin-left:240px;
+    padding:15px;
     flex:1;
 }
-h1, h2 {
-    color:#f1c40f;
-}
+h1, h2 { color:#f1c40f; }
 .gallery {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:10px;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:8px;
 }
 .gallery img {
     width:100%;
@@ -85,27 +80,27 @@ footer {
     text-align:center;
     color:#ccc;
     margin-top:20px;
-    padding:10px;
+    padding:8px;
     border-top:1px solid #333;
 }
 .whatsapp-btn {
     display:inline-block;
     background:#25D366;
     color:white;
-    padding:10px 20px;
+    padding:8px 16px;
     border-radius:5px;
     text-decoration:none;
-    margin:20px 0;
+    margin:15px 0;
 }
 .contact-form {
-    max-width:400px;
-    margin:20px auto;
+    max-width:360px;
+    margin:15px auto;
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:8px;
 }
 .contact-form input, .contact-form textarea {
-    padding:10px;
+    padding:8px;
     background:#000;
     border:1px solid #444;
     color:#ccc;
@@ -115,15 +110,13 @@ footer {
     background:#f1c40f;
     border:none;
     color:#000;
-    padding:10px;
+    padding:8px;
     font-weight:bold;
     cursor:pointer;
 }
+/* Masaüstü düzenini mobilde de koru */
 @media(max-width:768px){
-    .sidebar {
-        position:relative;
-        width:100%;
-        height:auto;
-    }
-    .content { margin-left:0; }
+    body { flex-direction:row; }
+    .sidebar { width:200px; position:fixed; }
+    .content { margin-left:220px; }
 }
