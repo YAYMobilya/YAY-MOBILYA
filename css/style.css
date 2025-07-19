@@ -4,37 +4,55 @@ body {
     font-family: Arial, sans-serif;
     background:#000;
     color:#ccc;
-}
-header {
-    background:#111;
-    color:#f1c40f;
-    padding:10px;
     display:flex;
-    align-items:center;
-    justify-content:space-between;
+    min-height:100vh;
 }
-header img { max-height:60px; }
-nav ul { list-style:none; margin:0; padding:0; display:flex; }
-nav li { position:relative; }
-nav > ul > li { margin:0 15px; }
-nav a { color:#ccc; text-decoration:none; padding:8px 12px; display:block; }
-nav a:hover { color:#f1c40f; }
-nav ul ul {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:#222;
-    min-width:180px;
+.sidebar {
+    width:250px;
+    background:#111;
+    padding:20px;
+    position:fixed;
+    top:0; bottom:0; left:0;
+    overflow-y:auto;
+}
+.sidebar img {
+    max-width:100%;
+    margin-bottom:20px;
+}
+.sidebar h2 {
+    color:#f1c40f;
+    font-size:18px;
+    margin-top:0;
+}
+.sidebar ul {
+    list-style:none;
     padding:0;
 }
-nav li:hover > ul { display:block; }
-h1, h2 { color:#f1c40f; }
+.sidebar li {
+    margin:5px 0;
+}
+.sidebar a {
+    color:#ccc;
+    text-decoration:none;
+    display:block;
+    padding:5px 10px;
+}
+.sidebar a:hover {
+    color:#f1c40f;
+    border-left:2px solid #f1c40f;
+}
+.content {
+    margin-left:270px;
+    padding:20px;
+    flex:1;
+}
+h1, h2 {
+    color:#f1c40f;
+}
 .gallery {
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:10px;
-    padding:20px;
 }
 .gallery img {
     width:100%;
@@ -54,20 +72,20 @@ h1, h2 { color:#f1c40f; }
 .lightbox img { max-width:90%; max-height:90%; }
 .lightbox:target { display:flex; }
 footer {
-    background:#111;
-    color:#ccc;
     text-align:center;
-    padding:15px;
+    color:#ccc;
     margin-top:20px;
+    padding:10px;
+    border-top:1px solid #333;
 }
 .whatsapp-btn {
     display:inline-block;
-    margin-top:20px;
     background:#25D366;
     color:white;
     padding:10px 20px;
     border-radius:5px;
     text-decoration:none;
+    margin:20px 0;
 }
 .contact-form {
     max-width:400px;
@@ -78,20 +96,20 @@ footer {
 }
 .contact-form input, .contact-form textarea {
     padding:10px;
-    border:1px solid #444;
     background:#000;
+    border:1px solid #444;
     color:#ccc;
     border-radius:5px;
 }
 .contact-form button {
     background:#f1c40f;
     border:none;
+    color:#000;
     padding:10px;
     font-weight:bold;
     cursor:pointer;
-    color:#000;
 }
 @media(max-width:768px){
-    nav ul { flex-direction:column; background:#111; }
-    nav ul ul { position:static; }
+    .sidebar { position:relative; width:100%; height:auto; }
+    .content { margin-left:0; }
 }
