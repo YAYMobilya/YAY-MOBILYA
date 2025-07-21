@@ -1,0 +1,106 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #ccc;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #111;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.sidebar .menu {
+    list-style: none;
+}
+
+.sidebar .menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sidebar .menu li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar .menu li:hover > a {
+    color: #FFD700; /* Sarı hover detayı */
+}
+
+.submenu, .subsubmenu {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+}
+
+.menu li:hover > .submenu {
+    display: block;
+}
+
+.submenu li:hover > .subsubmenu {
+    display: block;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    border: 1px dashed #555;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        width: 180px;
+        transform: translateX(-180px);
+        transition: transform 0.3s ease-in-out;
+    }
+    body.menu-open .sidebar {
+        transform: translateX(0);
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
