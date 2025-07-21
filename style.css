@@ -6,15 +6,14 @@ body { background-color: #000; color: #ccc; display: flex; min-height: 100vh; }
 .sidebar .menu { list-style: none; }
 .sidebar .menu li { padding: 10px 20px; cursor: pointer; }
 .sidebar .menu li a { color: #ccc; text-decoration: none; display: block; }
-.sidebar .menu li:hover > a { color: #FFD700; }
+/* Hover yerine sadece tıklama olacak, bu satır kaldırıldı */
 
-/* Ana kategoriler her zaman görünür */
-.submenu { display: block; list-style: none; padding-left: 15px; }
-.subsubmenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; list-style: none; padding-left: 15px; }
+.submenu, .subsubmenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; list-style: none; padding-left: 15px; }
 .submenu li.open > .subsubmenu { max-height: 500px; }
+.menu li.open > .submenu { max-height: 1000px; }
 
-.subsubmenu li a { color: #aaa; font-size: 14px; }
-.subsubmenu li a:hover { color: #FFD700; }
+.submenu li a, .subsubmenu li a { color: #aaa; font-size: 14px; }
+.submenu li a:hover, .subsubmenu li a:hover { color: #FFD700; }
 
 .main-content { flex: 1; margin-left: 220px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px; }
 .logo { max-width: 150px; height: auto; margin-bottom: 10px; }

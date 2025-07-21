@@ -198,18 +198,34 @@
             hamburger.addEventListener('touchstart', toggleMenu);
             overlay.addEventListener('click', toggleMenu);
 
-            // Mobilde alt kategorilerin açılıp kapanması
-            var links = document.querySelectorAll('.submenu > li > a');
-            links.forEach(function(element) {
-                function toggleSubmenu(e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        var parent = element.parentElement;
-                        parent.classList.toggle('open');
-                    }
-                }
-                element.addEventListener('click', toggleSubmenu);
-                element.addEventListener('touchstart', toggleSubmenu);
+            // Ana menü (Kategoriler ve Bize Ulaşın) tıklanarak açılır
+            var dropdownLinks = document.querySelectorAll('.menu > li > a');
+            dropdownLinks.forEach(function(element) {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var parent = element.parentElement;
+                    parent.classList.toggle('open');
+                });
+                element.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    var parent = element.parentElement;
+                    parent.classList.toggle('open');
+                });
+            });
+
+            // Alt kategoriler (Lake, Membran vb.) tıklanarak açılır
+            var subLinks = document.querySelectorAll('.submenu > li > a');
+            subLinks.forEach(function(element) {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var parent = element.parentElement;
+                    parent.classList.toggle('open');
+                });
+                element.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    var parent = element.parentElement;
+                    parent.classList.toggle('open');
+                });
             });
         });
     </script>
