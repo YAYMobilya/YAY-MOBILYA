@@ -1,7 +1,17 @@
 
-function openNav() {
-    document.getElementById("sidebar").style.width = "250px";
+function toggleMenu(id) {
+    const menu = document.getElementById(id);
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
 }
-function closeNav() {
-    document.getElementById("sidebar").style.width = "0";
+function toggleSubMenu(id) {
+    const submenu = document.getElementById(id);
+    if (submenu.style.display === "flex") {
+        submenu.style.display = "none";
+    } else {
+        submenu.style.display = "flex";
+    }
 }

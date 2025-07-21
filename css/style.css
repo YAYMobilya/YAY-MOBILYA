@@ -2,121 +2,102 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Üst header */
-header {
-    background-color: #1e1e1e;
-    color: #fff;
+    background-color: #000;
+    color: #bbb;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: relative;
-}
-.logo {
-    max-height: 60px;
-}
-.menu-toggle {
-    font-size: 28px;
-    cursor: pointer;
-    color: #f1c40f;
-    background: none;
-    border: none;
+    min-height: 100vh;
 }
 
-/* Yan menü */
+/* Sol sabit menü */
 .sidebar {
-    height: 100%;
-    width: 0;
+    width: 220px;
+    background-color: #111;
+    padding-top: 20px;
     position: fixed;
-    top: 0;
     left: 0;
-    background-color: #1e1e1e;
-    overflow-x: hidden;
-    transition: 0.4s;
-    padding-top: 60px;
-    z-index: 1000;
-}
-.sidebar a {
-    padding: 12px 24px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #f1c40f;
-    display: block;
-    transition: 0.3s;
-}
-.sidebar a:hover {
-    background-color: #333;
-}
-.sidebar .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 36px;
-    color: #f1c40f;
-    cursor: pointer;
-}
-
-/* İçerik */
-main {
-    padding: 20px;
-}
-.categories {
-    background: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-.categories h2 {
-    color: #f1c40f;
-}
-
-/* İletişim */
-.contact {
-    background: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-.contact-form {
+    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: auto;
+    align-items: center;
 }
-.contact-form input, .contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.sidebar img.logo {
+    max-width: 120px;
+    margin-bottom: 30px;
 }
-.contact-form button {
-    background: #f1c40f;
+.sidebar button {
+    background: none;
     border: none;
-    padding: 10px;
+    color: #f1c40f;
+    font-size: 18px;
+    margin: 10px 0;
     cursor: pointer;
-    font-weight: bold;
-}
-
-/* WhatsApp butonu */
-.whatsapp-btn {
-    display: inline-block;
-    margin-bottom: 15px;
-    padding: 10px 20px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
+    width: 100%;
     padding: 10px;
-    margin-top: 20px;
+    text-align: center;
+    transition: background 0.3s;
+}
+.sidebar button:hover {
+    background-color: #222;
+}
+
+/* Alt menü */
+.submenu, .contact-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.submenu a, .contact-menu a {
+    padding: 8px;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+.submenu a:hover, .contact-menu a:hover {
+    background-color: #333;
+    color: #f1c40f;
+}
+.sub-submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.sub-submenu a {
+    font-size: 14px;
+}
+
+/* İçerik alanı */
+.main-content {
+    margin-left: 220px;
+    flex: 1;
+    padding: 20px;
+    background-color: #000;
+    color: #bbb;
+}
+.main-content h1, .main-content h2 {
+    color: #f1c40f;
+}
+
+/* Video alanı placeholder */
+.video-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    border: 2px dashed #444;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+    .main-content {
+        margin-left: 180px;
+    }
 }
