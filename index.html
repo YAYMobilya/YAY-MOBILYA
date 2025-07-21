@@ -186,7 +186,7 @@
             <p>Video Alanı (Geçici)</p>
         </div>
     </div>
-    
+
     <div class="overlay"></div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -195,40 +195,20 @@
 
             function toggleMenu() { document.body.classList.toggle('menu-open'); }
             hamburger.addEventListener('click', toggleMenu);
-            hamburger.addEventListener('touchstart', toggleMenu);
             overlay.addEventListener('click', toggleMenu);
 
-            // Ana menü (Kategoriler ve Bize Ulaşın) tıklanarak açılır
-            var dropdownLinks = document.querySelectorAll('.menu > li > a');
-            dropdownLinks.forEach(function(element) {
+            // Ana ve alt tüm menüler tıklama ile açılıp kapanır
+            var allLinks = document.querySelectorAll('.menu li > a');
+            allLinks.forEach(function(element) {
                 element.addEventListener('click', function(e) {
-                    e.preventDefault();
                     var parent = element.parentElement;
-                    parent.classList.toggle('open');
-                });
-                element.addEventListener('touchstart', function(e) {
-                    e.preventDefault();
-                    var parent = element.parentElement;
-                    parent.classList.toggle('open');
-                });
-            });
-
-            // Alt kategoriler (Lake, Membran vb.) tıklanarak açılır
-            var subLinks = document.querySelectorAll('.submenu > li > a');
-            subLinks.forEach(function(element) {
-                element.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var parent = element.parentElement;
-                    parent.classList.toggle('open');
-                });
-                element.addEventListener('touchstart', function(e) {
-                    e.preventDefault();
-                    var parent = element.parentElement;
-                    parent.classList.toggle('open');
+                    if (parent.querySelector('ul')) {
+                        e.preventDefault();
+                        parent.classList.toggle('open');
+                    }
                 });
             });
         });
     </script>
-
 </body>
 </html>
