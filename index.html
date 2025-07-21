@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <div class="hamburger" onclick="document.body.classList.toggle('menu-open')">
+        ☰
+    </div>
     <div class="sidebar">
+    
         <ul class="menu">
             <li class="dropdown">
                 <a href="#">Kategoriler</a>
@@ -185,5 +190,13 @@
             <p>Video Alanı (Geçici)</p>
         </div>
     </div>
-</body>
+
+    <script>
+        // Menü açma-kapama için body sınıfı toggle ediliyor (hamburger ile)
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+    </script>
+    </body>
+    
 </html>
