@@ -68,14 +68,17 @@ body {
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 150px; /* Daha küçük logo */
+    height: auto;
     margin-bottom: 10px;
 }
 
 h1 {
-    font-size: 28px;
-    color: #ccc;
+    font-size: 26px;
+    color: #FFD700; /* Sarı yazı */
     margin-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .video-placeholder {
@@ -102,5 +105,11 @@ h1 {
     .main-content {
         margin-left: 0;
         padding: 20px;
+    }
+    .logo {
+        max-width: 120px; /* Mobilde daha küçük logo */
+    }
+    h1 {
+        font-size: 20px;
     }
 }
