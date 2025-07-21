@@ -1,51 +1,80 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
+
+/* Üst header */
 header {
     background-color: #1e1e1e;
     color: #fff;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
 }
 .logo {
-    max-height: 100px;
+    max-height: 60px;
 }
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-.navbar li {
-    margin: 0 10px;
-}
-.navbar a {
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
     color: #f1c40f;
+    background: none;
+    border: none;
+}
+
+/* Yan menü */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1e1e1e;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+.sidebar a {
+    padding: 12px 24px;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
+    color: #f1c40f;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    background-color: #333;
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    color: #f1c40f;
+    cursor: pointer;
+}
+
+/* İçerik */
+main {
+    padding: 20px;
 }
 .categories {
+    background: #fff;
     padding: 20px;
-    background-color: #fff;
+    margin-top: 20px;
+    text-align: center;
 }
 .categories h2 {
-    text-align: center;
     color: #f1c40f;
 }
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-}
-.category img {
-    width: 100%;
-    border-radius: 8px;
-}
+
+/* İletişim */
 .contact {
     background: #fff;
     padding: 20px;
@@ -59,8 +88,7 @@ header {
     max-width: 400px;
     margin: auto;
 }
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -69,9 +97,11 @@ header {
     background: #f1c40f;
     border: none;
     padding: 10px;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
 }
+
+/* WhatsApp butonu */
 .whatsapp-btn {
     display: inline-block;
     margin-bottom: 15px;
@@ -81,15 +111,12 @@ header {
     text-decoration: none;
     border-radius: 5px;
 }
+
+/* Footer */
 footer {
-    background-color: #333;
+    background: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
-}
-@media (max-width: 600px) {
-    .navbar ul {
-        flex-direction: column;
-    }
 }

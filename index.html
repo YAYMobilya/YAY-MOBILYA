@@ -5,29 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAY Mobilya</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="YAY Mobilya Logosu" class="logo">
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="#categories">Kategoriler</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
-        </nav>
+        <img src="images/logo.png" alt="YAY Mobilya" class="logo">
+        <button class="menu-toggle" onclick="openNav()">☰</button>
     </header>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="mutfak-dolabı.html">Mutfak dolabı</a>
+<a href="tv-ünitesi.html">Tv ünitesi</a>
+<a href="kahve-köşesi.html">Kahve köşesi</a>
+<a href="banyo-dolabı-ve-duşakabin.html">Banyo dolabı ve duşakabin</a>
+<a href="gardrop.html">Gardrop</a>
+<a href="vestiyer.html">Vestiyer</a>
+<a href="yatak-odası.html">Yatak odası</a>
+<a href="çocuk-odası.html">Çocuk odası</a>
+<a href="genç-odası.html">Genç odası</a>
+<a href="yemek-masası.html">Yemek masası</a>
+<a href="mutfak-masası.html">Mutfak masası</a>
+<a href="zigon-sehpa.html">Zigon sehpa</a>
+<a href="orta-sehpa.html">Orta sehpa</a>
+<a href="bahçe-takımı.html">Bahçe takımı</a>
+<a href="hamak.html">Hamak</a>
+    </div>
     <main>
-        <section id="categories" class="categories">
-            <h2>Hizmetlerimiz</h2>
-            <div class="category-grid">
-                <div class="category"><a href="mutfak-dolabı.html"><img src="https://via.placeholder.com/300x200?text=Mutfak+dolabı" alt="Mutfak dolabı"><p>Mutfak dolabı</p></a></div><div class="category"><a href="tv-ünitesi.html"><img src="https://via.placeholder.com/300x200?text=Tv+ünitesi" alt="Tv ünitesi"><p>Tv ünitesi</p></a></div><div class="category"><a href="kahve-köşesi.html"><img src="https://via.placeholder.com/300x200?text=Kahve+köşesi" alt="Kahve köşesi"><p>Kahve köşesi</p></a></div><div class="category"><a href="banyo-dolabı-ve-duşakabin.html"><img src="https://via.placeholder.com/300x200?text=Banyo+dolabı+ve+duşakabin" alt="Banyo dolabı ve duşakabin"><p>Banyo dolabı ve duşakabin</p></a></div><div class="category"><a href="gardrop.html"><img src="https://via.placeholder.com/300x200?text=Gardrop" alt="Gardrop"><p>Gardrop</p></a></div><div class="category"><a href="vestiyer.html"><img src="https://via.placeholder.com/300x200?text=Vestiyer" alt="Vestiyer"><p>Vestiyer</p></a></div><div class="category"><a href="yatak-odası.html"><img src="https://via.placeholder.com/300x200?text=Yatak+odası" alt="Yatak odası"><p>Yatak odası</p></a></div><div class="category"><a href="çocuk-odası.html"><img src="https://via.placeholder.com/300x200?text=Çocuk+odası" alt="Çocuk odası"><p>Çocuk odası</p></a></div><div class="category"><a href="genç-odası.html"><img src="https://via.placeholder.com/300x200?text=Genç+odası" alt="Genç odası"><p>Genç odası</p></a></div><div class="category"><a href="yemek-masası.html"><img src="https://via.placeholder.com/300x200?text=Yemek+masası" alt="Yemek masası"><p>Yemek masası</p></a></div><div class="category"><a href="mutfak-masası.html"><img src="https://via.placeholder.com/300x200?text=Mutfak+masası" alt="Mutfak masası"><p>Mutfak masası</p></a></div><div class="category"><a href="zigon-sehpa.html"><img src="https://via.placeholder.com/300x200?text=Zigon+sehpa" alt="Zigon sehpa"><p>Zigon sehpa</p></a></div><div class="category"><a href="orta-sehpa.html"><img src="https://via.placeholder.com/300x200?text=Orta+sehpa" alt="Orta sehpa"><p>Orta sehpa</p></a></div><div class="category"><a href="bahçe-takımı.html"><img src="https://via.placeholder.com/300x200?text=Bahçe+takımı" alt="Bahçe takımı"><p>Bahçe takımı</p></a></div><div class="category"><a href="hamak.html"><img src="https://via.placeholder.com/300x200?text=Hamak" alt="Hamak"><p>Hamak</p></a></div>
-            </div>
+        <section class="categories">
+            <h2>Hoş Geldiniz</h2>
+            <p>Yarım Ay Yapı Mobilya - Kaliteli ve özel tasarım mobilyalar</p>
         </section>
-        <section id="contact" class="contact">
+        <section class="contact">
             <h2>Bize Ulaşın</h2>
-            <p>Hemen iletişime geçin veya WhatsApp üzerinden teklif alın.</p>
-            <a href="https://wa.me/905345617814" class="whatsapp-btn" target="_blank">📞 WhatsApp ile İletişim</a>
+            <p>WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+            <a href="https://wa.me/905345617814" target="_blank" class="whatsapp-btn">📞 WhatsApp</a>
             <form class="contact-form">
                 <input type="text" placeholder="Adınız" required>
                 <input type="email" placeholder="E-posta" required>
