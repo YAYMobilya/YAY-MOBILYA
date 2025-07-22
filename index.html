@@ -195,17 +195,21 @@
 
             function toggleMenu() { document.body.classList.toggle('menu-open'); }
             hamburger.addEventListener('click', toggleMenu);
+            hamburger.addEventListener('touchstart', toggleMenu);
             overlay.addEventListener('click', toggleMenu);
+            overlay.addEventListener('touchstart', toggleMenu);
 
-            // Ana ve alt tüm menüler tıklama ile açılıp kapanır
+            // Menü ve alt menüler tıklama + dokunma ile açılır/kapanır
             var allLinks = document.querySelectorAll('.menu li > a');
             allLinks.forEach(function(element) {
-                element.addEventListener('click', function(e) {
-                    var parent = element.parentElement;
-                    if (parent.querySelector('ul')) {
-                        e.preventDefault();
-                        parent.classList.toggle('open');
-                    }
+                ['click', 'touchstart'].forEach(function(evt) {
+                    element.addEventListener(evt, function(e) {
+                        var parent = element.parentElement;
+                        if (parent.querySelector('ul')) {
+                            e.preventDefault();
+                            parent.classList.toggle('open');
+                        }
+                    });
                 });
             });
         });

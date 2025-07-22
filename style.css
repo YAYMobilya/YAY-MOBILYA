@@ -5,14 +5,14 @@ body { background-color: #000; color: #ccc; display: flex; min-height: 100vh; }
 .sidebar { width: 220px; background-color: #111; padding-top: 20px; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; }
 .sidebar .menu { list-style: none; }
 .sidebar .menu li { padding: 10px 20px; cursor: pointer; }
-.sidebar .menu li a { color: #ccc; text-decoration: none; display: block; }
+.sidebar .menu li a { color: #e0e0e0; text-decoration: none; display: block; }
 
-/* Alt menüler varsayılan kapalı */
-.submenu, .subsubmenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; list-style: none; padding-left: 15px; }
-.menu li.open > .submenu { max-height: 1000px; }
-.submenu li.open > .subsubmenu { max-height: 500px; }
+/* Alt menüler varsayılan kapalı, açılınca daha büyük max-height */
+.submenu, .subsubmenu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; list-style: none; padding-left: 15px; }
+.menu li.open > .submenu { max-height: 2000px; } /* Tüm listeye yetecek kadar */
+.submenu li.open > .subsubmenu { max-height: 1000px; }
 
-.submenu li a, .subsubmenu li a { color: #aaa; font-size: 14px; }
+.submenu li a, .subsubmenu li a { color: #ccc; font-size: 14px; }
 .submenu li a:hover, .subsubmenu li a:hover { color: #FFD700; }
 
 .main-content { flex: 1; margin-left: 220px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px; }
