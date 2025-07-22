@@ -2,124 +2,217 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YAY Mobilya</title>
-  <style>
-    /* Genel Stil */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
-
-    nav {
-      background: #222;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    nav ul li {
-      position: relative;
-    }
-
-    nav ul li a {
-      display: block;
-      padding: 15px 20px;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    nav ul li a:hover {
-      background: #444;
-    }
-
-    /* Alt Menü */
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #fff;
-      width: 200px;
-      z-index: 9999; /* Önde görünmesi için */
-    }
-
-    .submenu li a {
-      color: #333;
-      padding: 10px 15px;
-    }
-
-    .submenu li a:hover {
-      background: #eee;
-    }
-
-    .has-submenu.open .submenu {
-      display: block;
-    }
-
-    /* Mobil için */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav ul li {
-        width: 100%;
-      }
-
-      nav ul li a {
-        width: 100%;
-        border-bottom: 1px solid #444;
-      }
-
-      .submenu {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YARIM AY YAPI MOBİLYA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">Ana Sayfa</a></li>
-      <li class="has-submenu">
-        <a href="#">Kategoriler</a>
-        <ul class="submenu">
-          <li><a href="#">Oturma Grupları</a></li>
-          <li><a href="#">Yemek Masaları</a></li>
-          <li><a href="#">Dolaplar</a></li>
+    <div class="hamburger">☰</div>
+    <div class="sidebar">
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#">Kategoriler</a>
+                <ul class="submenu">
+                    
+    <li>
+        <a href="#">Mutfak Dolabı</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Mutfak Dolabı Lake</a></li>
+            <li><a href="#">Mutfak Dolabı Membran</a></li>
+            <li><a href="#">Mutfak Dolabı Glosmax</a></li>
+            <li><a href="#">Mutfak Dolabı MDF Lam</a></li>
         </ul>
-      </li>
-      <li><a href="#">İletişim</a></li>
-    </ul>
-  </nav>
+    </li>
+    
+    <li>
+        <a href="#">TV Ünitesi</a>
+        <ul class="subsubmenu">
+            <li><a href="#">TV Ünitesi Lake</a></li>
+            <li><a href="#">TV Ünitesi Membran</a></li>
+            <li><a href="#">TV Ünitesi Glosmax</a></li>
+            <li><a href="#">TV Ünitesi MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Kahve Köşesi</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Kahve Köşesi Lake</a></li>
+            <li><a href="#">Kahve Köşesi Membran</a></li>
+            <li><a href="#">Kahve Köşesi Glosmax</a></li>
+            <li><a href="#">Kahve Köşesi MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Banyo Dolabı ve Duşakabin</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Banyo Dolabı ve Duşakabin Lake</a></li>
+            <li><a href="#">Banyo Dolabı ve Duşakabin Membran</a></li>
+            <li><a href="#">Banyo Dolabı ve Duşakabin Glosmax</a></li>
+            <li><a href="#">Banyo Dolabı ve Duşakabin MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Gardrop</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Gardrop Lake</a></li>
+            <li><a href="#">Gardrop Membran</a></li>
+            <li><a href="#">Gardrop Glosmax</a></li>
+            <li><a href="#">Gardrop MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Vestiyer</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Vestiyer Lake</a></li>
+            <li><a href="#">Vestiyer Membran</a></li>
+            <li><a href="#">Vestiyer Glosmax</a></li>
+            <li><a href="#">Vestiyer MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Yatak Odası</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Yatak Odası Lake</a></li>
+            <li><a href="#">Yatak Odası Membran</a></li>
+            <li><a href="#">Yatak Odası Glosmax</a></li>
+            <li><a href="#">Yatak Odası MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Çocuk Odası</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Çocuk Odası Lake</a></li>
+            <li><a href="#">Çocuk Odası Membran</a></li>
+            <li><a href="#">Çocuk Odası Glosmax</a></li>
+            <li><a href="#">Çocuk Odası MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Genç Odası</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Genç Odası Lake</a></li>
+            <li><a href="#">Genç Odası Membran</a></li>
+            <li><a href="#">Genç Odası Glosmax</a></li>
+            <li><a href="#">Genç Odası MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Yemek Masası</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Yemek Masası Lake</a></li>
+            <li><a href="#">Yemek Masası Membran</a></li>
+            <li><a href="#">Yemek Masası Glosmax</a></li>
+            <li><a href="#">Yemek Masası MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Mutfak Masası</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Mutfak Masası Lake</a></li>
+            <li><a href="#">Mutfak Masası Membran</a></li>
+            <li><a href="#">Mutfak Masası Glosmax</a></li>
+            <li><a href="#">Mutfak Masası MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Zigon Sehpa</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Zigon Sehpa Lake</a></li>
+            <li><a href="#">Zigon Sehpa Membran</a></li>
+            <li><a href="#">Zigon Sehpa Glosmax</a></li>
+            <li><a href="#">Zigon Sehpa MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Orta Sehpa</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Orta Sehpa Lake</a></li>
+            <li><a href="#">Orta Sehpa Membran</a></li>
+            <li><a href="#">Orta Sehpa Glosmax</a></li>
+            <li><a href="#">Orta Sehpa MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Bahçe Takımı</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Bahçe Takımı Lake</a></li>
+            <li><a href="#">Bahçe Takımı Membran</a></li>
+            <li><a href="#">Bahçe Takımı Glosmax</a></li>
+            <li><a href="#">Bahçe Takımı MDF Lam</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#">Hamak</a>
+        <ul class="subsubmenu">
+            <li><a href="#">Hamak Lake</a></li>
+            <li><a href="#">Hamak Membran</a></li>
+            <li><a href="#">Hamak Glosmax</a></li>
+            <li><a href="#">Hamak MDF Lam</a></li>
+        </ul>
+    </li>
+    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Bize Ulaşın</a>
+                <ul class="submenu">
+                    <li><a href="https://wa.me/">WhatsApp</a></li>
+                    <li><a href="mailto:info@yaymobilya.com">E-Posta</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll('.has-submenu > a').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          if (window.innerWidth <= 768) { // Sadece mobilde çalışsın
-            e.preventDefault();
-            this.parentElement.classList.toggle('open');
-          }
+    <div class="main-content">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="YAY Mobilya Logo" class="logo">
+            <h1>YARIM AY YAPI MOBİLYA</h1>
+        </div>
+        <div class="video-placeholder">
+            <p>Video Alanı (Geçici)</p>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var hamburger = document.querySelector('.hamburger');
+            var overlay = document.querySelector('.overlay');
+
+            function toggleMenu() { document.body.classList.toggle('menu-open'); }
+            hamburger.addEventListener('click', toggleMenu);
+            hamburger.addEventListener('touchstart', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+            overlay.addEventListener('touchstart', toggleMenu);
+
+            // Menü ve alt menüler tıklama + dokunma ile açılır/kapanır
+            var allLinks = document.querySelectorAll('.menu li > a');
+            allLinks.forEach(function(element) {
+                ['click', 'touchstart'].forEach(function(evt) {
+                    element.addEventListener(evt, function(e) {
+                        var parent = element.parentElement;
+                        if (parent.querySelector('ul')) {
+                            e.preventDefault();
+                            parent.classList.toggle('open');
+                        }
+                    });
+                });
+            });
         });
-      });
-    });
-  </script>
+    </script>
 </body>
 </html>
